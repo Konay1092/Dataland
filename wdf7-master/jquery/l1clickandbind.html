@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click and Bind Events</title>
+  </head>
+  <body>
+    <h1>Welcome to jQuery</h1>
+    <h3>this is awesome js libaary.</h3>
+    <button type="button" id="siclickme">Click Me</button>
+    <button type="button" id="dblclickme">Double Click Me</button>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        console.log("hey");
+        /* $("#dblclickme").dblclick("click", function () {
+          console.log("doubleclick");
+        }); */
+        /* $("#siclickme").click("click", function () {
+          console.log(" Single click");
+        }); */
+        $("#siclickme").bind("click", function () {
+          console.log(" Single click");
+        });
+        $("#dblclickme").bind("dblclick", function () {
+          /* console.log("doubleclick"); */
+          console.log(" i am double click by bind" + this.nodeName);
+        });
+      });
+    </script>
+  </body>
+</html>

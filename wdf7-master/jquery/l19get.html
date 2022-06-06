@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Metod</title>
+    <style>
+      body {
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        display: flex;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: silver;
+        margin: 0 20px;
+      }
+      .orange {
+        background-color: orange;
+      }
+      .green {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="div1" class="box orange">Box1</div>
+      <div id="div2" class="box green">Box1</div>
+      <div id="div3" class="box">Box1</div>
+    </div>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        console.log($(".box"));
+        console.log($(".box")[0]);
+        console.log($(".box")[0].className);
+        console.log($(".box")[0].className[0]);
+        console.log($(".box")[0].classList);
+        console.log($(".box")[0].classList[0]);
+
+        console.log($(".box")[0].id);
+
+        console.log($(".box").get(1));
+        console.log($(".box").get(1).className);
+        console.log($(".box").get(1).className[1]);
+        console.log($(".box").get(1).classList[1]);
+
+        console.log($(".box").get(1).id);
+      });
+    </script>
+  </body>
+</html>

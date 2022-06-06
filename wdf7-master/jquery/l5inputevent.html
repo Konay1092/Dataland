@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Method</title>
+    <style>
+      body {
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 500px;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+      .form-group {
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <div class="form-group">
+          <label for="firstname">First Name</label>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            class="form-control"
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastname">Last Name</label>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            class="form-control"
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select name="country" id="country" class="form-control">
+            <option selected disabled>Choose a country</option>
+            <option value="mm">Myanmar</option>
+            <option value="th">Thailand</option>
+            <option value="indo">Indonesia</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            class="form-control"
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            class="form-control"
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label for="nrc">NRC</label>
+          <input
+            type="text"
+            name="nrc"
+            id="nrc"
+            class="form-control"
+            autocomplete="off"
+          />
+        </div>
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+      </form>
+    </div>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //console.log("hi");
+
+        //blur()
+        /*  $("#firstname").blur(function () {
+          console.log("first name is working by blur");
+        }); */
+
+        //change()
+
+        /* $("#firstname").change(function () {
+          console.log("first name is working by change");
+        }); */
+
+        /* $("select").change(function () {
+          console.log("You change to you country");
+        }); */
+
+        //focus()
+        // $("#firstname").focus(function () {
+        //   console.log("first name is working by focus");
+        // });
+
+        //focusin()
+        /*  $("#firstname").focusin(function () {
+          console.log("first name is working by focusin");
+        }); */
+
+        //focusout
+        /* $("#firstname").focusout(function () {
+          console.log("first name is working by focusout");
+        }); */
+
+        //select()
+        /* $("input").select(function () {
+          console.log("selected in sometext");
+        }); */
+
+        //keydown()
+        var q = 0;
+        /*  $("#age").keydown(function () {
+          console.log("age is working by keydown");
+          console.log(q++);
+        }); */
+
+        //keypress()
+        // $("#age").keypress(function () {
+        //   console.log("age is working by keypress");
+        //   console.log(q++);
+        // });
+
+        //keyup
+        /*  $("#age").keyup(function () {
+          console.log("age is working by keyup");
+          console.log(q++);
+        }); */
+
+        //submit
+        $("form").submit(function (e) {
+          var getfirst = $("#firstname").val();
+          var getlast = $("#lastname").val();
+
+          var getcountry = $("#country").val();
+
+          var getage = $("#age").val();
+
+          var getphone = $("#phone").val();
+
+          var getnrc = $("#nrc").val();
+
+          //console.log(get);
+          console.log("First name :" + getfirst);
+          console.log("Last name :" + getlast);
+          console.log("You chose " + getcountry + " country");
+          console.log("Your age:" + getage);
+          console.log("Phone number :" + getphone);
+          console.log("NRC :" + getnrc);
+          e.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>

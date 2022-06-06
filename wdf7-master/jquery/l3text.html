@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Method</title>
+  </head>
+  <body>
+    <h1>This is awesome <u>js libary</u></h1>
+    <h1>save myanmar</h1>
+    <h1>pray myanmar</h1>
+    <hr />
+    <h2>This is awesome <u>js libary</u></h2>
+    <h2>save myanmar</h2>
+    <h2>pray myanmar</h2>
+    <script src="libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      // html() vs text()
+
+      //html() to html()
+      /*  $(document).ready(function () {
+        //console.log("hi");
+        //var getfirsth1 = $("h1:first").html();
+        //$("h1:last").html(getfirsth1);
+        var getfirsth1 = $("h1:first").html();
+        $("h1:last").html(getfirsth1);
+        console.log(getfirsth1);
+      }); */
+
+      //text()
+      $(document).ready(function () {
+        //console.log($("h2").html());
+        //console.log($("h2").text());
+        const getfirsth2 = $("h2").text();
+        $("h2").text(getfirsth2);
+      });
+    </script>
+  </body>
+</html>

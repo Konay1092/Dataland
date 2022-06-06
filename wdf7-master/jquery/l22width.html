@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Width Method</title>
+    <style type="text/css">
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .box1 {
+        width: 100px;
+        height: 80px;
+        /* margin: 10px; //not work */
+        padding: 10px;
+      }
+      .box2 {
+        width: 200px;
+        height: 80px;
+        padding: 10px;
+      }
+      .box3 {
+        width: 300px;
+        height: 80px;
+        padding: 10px;
+      }
+      .box4 {
+        width: 400px;
+        height: 80px;
+        padding: 10px;
+      }
+      .box5 {
+        width: 500px;
+        height: 80px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1" style="background-color: red">Box1</div>
+      <div class="box2" style="background-color: green">Box2</div>
+      <div class="box3" style="background-color: orange">Box3</div>
+      <div class="box4" style="background-color: blue">Box4</div>
+      <div class="box5" style="background-color: violet">Box5</div>
+    </div>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // console.log("hi");
+        $(".box1").click(function () {
+          console.log("Box 1 width=" + $(this).width());
+          console.log("Box 1 innerwidth=" + $(this).innerWidth());
+          console.log("Box 1 outerwidth=" + $(this).outerWidth());
+        });
+        $(".box2").click(function () {
+          console.log("Box 2 width=" + $(this).width());
+          console.log("Box 2 innerwidth=" + $(this).innerWidth());
+          console.log("Box 2 outerwidth=" + $(this).outerWidth());
+        });
+        $(".box3").click(function () {
+          console.log("Box 3 width=" + $(this).width());
+          console.log("Box 3 innerwidth=" + $(this).innerWidth());
+          console.log("Box 3 outerwidth=" + $(this).outerWidth());
+        });
+        $(".box4").click(function () {
+          console.log("Box 4 width=" + $(this).width());
+          console.log("Box 4 innerwidth=" + $(this).innerWidth());
+          console.log("Box 4 outerwidth=" + $(this).outerWidth());
+        });
+        $(".box5").click(function () {
+          console.log("Box 5 width=" + $(this).width());
+          console.log("Box 5 innerwidth=" + $(this).innerWidth());
+          console.log("Box 5 outerwidth=" + $(this).outerWidth());
+        });
+      });
+    </script>
+  </body>
+</html>

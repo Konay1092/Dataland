@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offset and Position</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .offset {
+        display: flex;
+      }
+      .box {
+        width: 80px;
+        height: 80px;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="offset">
+        <div class="box" style="background-color: red"></div>
+        <div class="box" style="background-color: green"></div>
+        <div class="box" style="background-color: yellow"></div>
+        <div class="box" style="background-color: blue"></div>
+      </div>
+      <table>
+        <tr>
+          <td id="oresult1"></td>
+          <td id="oresult2"></td>
+        </tr>
+        <tr>
+          <td id="presult1"></td>
+          <td id="presult2"></td>
+        </tr>
+      </table>
+    </div>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        console.log("hi");
+        //offset()
+        $(".box").click(function () {
+          var offestbox = $(this).offset();
+          $("#preresult1").html("left offest:<b>" + offestbox.left + "</b>");
+          $("#oresult1").html(" <b>top offest: " + offestbox.left + "</b>");
+        });
+        //position
+        $(".box").click(function () {
+          var positionbox = $(this).position();
+          $("#preresult2").html(
+            "left position:<b>" + positionbox.left + "</b>"
+          );
+          $("#oresult2").html("top position:<b>" + positionbox.left + "</b>");
+        });
+      });
+    </script>
+  </body>
+</html>

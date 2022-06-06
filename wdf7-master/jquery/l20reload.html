@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reload Method</title>
+  </head>
+  <body>
+    <div>
+      <h1>Refresh or Reload With Jquery</h1>
+      <p id="display"></p>
+      <button type="button">Reload</button>
+    </div>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        console.log("hi");
+        $("button").click(function () {
+          location.reload(true);
+        });
+      });
+      var getdate = new Date();
+      document.getElementById("display").textContent = getdate;
+    </script>
+  </body>
+</html>

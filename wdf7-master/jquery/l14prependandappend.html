@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>prepend and append Method</title>
+  </head>
+  <body>
+    <h1>Hello Myanmar</h1>
+    <button type="button" id="prependbtn">Prepend Text</button>
+    <button type="button" id="appendbtn">Append Text</button>
+    <button type="button" id="appendtobtn">Appendto Text</button>
+
+    <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // console.log("hi");
+
+        $("#prependbtn").click(function () {
+          // $("h1").before("SaveMe");
+          // $("h1").prepend("Greeting Message = ");
+          $("h1").prepend("<u>Greeting Message = </u></br>");
+        });
+
+        $("#appendbtn").click(function () {
+          // $("h1").after("SaveMe");
+          // $("h1").append("Greeting Message = ");
+          $("h1").append("<u>Greeting Message = </u>");
+        });
+
+        $("#appendtobtn").click(function () {
+          // result = no (cuz must be in html code)
+          // $("hello world").appendTo("h1");
+
+          $("<i>Greeting Message = </i>").appendTo("h1");
+        });
+      });
+    </script>
+  </body>
+</html>
